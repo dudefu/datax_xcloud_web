@@ -6,27 +6,27 @@
 	<select id="queryTaskDescription" resultType="com.xinyi.datax_xcloud_web.entity.TaskDescription">
 		SELECT tdTaskId, tdSourceId,
 		tdMode, tdIncrementColumn, tdTableName,tdColumns,tdTargetTableName,tdDispatch,tdRemarks
-		FROM tab_data_migrate_taskdesction
+		FROM TAB_DATA_MIGRATE_TASKDESCTION
 		ORDER BY tdTaskId
 		DESC
 	</select>
 	<select id="queryTaskDescriptionById" resultType="com.xinyi.datax_xcloud_web.entity.TaskDescription">
 		SELECT tdTaskId, tdSourceId,
 		tdMode, tdIncrementColumn, tdTableName,tdColumns,tdTargetTableName,tdDispatch,tdRemarks
-		FROM tab_data_migrate_taskdesction
+		FROM TAB_DATA_MIGRATE_TASKDESCTION
 		WHERE
 		tdTaskId=#{tdTaskId}
 	</select>
 	<insert id="insertTaskDescription"  parameterType="com.xinyi.datax_xcloud_web.entity.TaskDescription">
 		INSERT INTO
-		tab_data_migrate_taskdesction(tdTaskId, tdSourceId,
+		TAB_DATA_MIGRATE_TASKDESCTION(tdTaskId, tdSourceId,
 		tdMode, tdIncrementColumn, tdTableName,tdColumns,tdTargetTableName,tdDispatch,tdRemarks)
 		VALUES
 		(#{tdTaskId},#{tdSourceId},#{tdMode},#{tdIncrementColumn},
 		#{tdTableName},#{tdColumns},#{tdTargetTableName},#{tdDispatch},#{tdRemarks})
 	</insert>
 	<update id="updateTaskDescription" parameterType="com.xinyi.datax_xcloud_web.entity.TaskDescription">
-		update tab_data_migrate_taskdesction
+		update TAB_DATA_MIGRATE_TASKDESCTION
 		<set>
 			<if test="tdSourceId != null">tdSourceId=#{tdSourceId},</if>
 			<if test="tdMode != null">tdMode=#{tdMode},</if>
@@ -41,7 +41,7 @@
 	</update>
 	<delete id="deleteTaskDescription">
 		DELETE FROM
-		tab_data_migrate_taskdesction
+		TAB_DATA_MIGRATE_TASKDESCTION
 		WHERE
 		tdTaskId =
 		#{tdTaskId}
