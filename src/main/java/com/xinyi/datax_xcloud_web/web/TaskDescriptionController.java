@@ -26,7 +26,7 @@ public class TaskDescriptionController {
 	private TaskDescriptionService taskDescriptionService ;
 
 	/**
-	 * 获取所有的任务
+	 * 数据导入任务描述列表查询接口
 	 * 
 	 * @return
 	 */
@@ -51,7 +51,7 @@ public class TaskDescriptionController {
 	}
 
 	/**
-	 * 通过taskId获取任务
+	 * 数据导入任务描述详情查询接口
 	 * 
 	 * @return
 	 */
